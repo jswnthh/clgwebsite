@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> learning api arsehole</h2>
+    <form method="POST">
+        {%csrf_token%}
+        {{form.sensor_data}}
+        <input type="submit" value="submit">
+    </form>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <br><br><br>
+    {% for person in persons%}
+    <div class="container">
+        {{person.name}} - {{person.food}}
+    </div>
+    {% endfor %}
+</body>
+
+</html>
